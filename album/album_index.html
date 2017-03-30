@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>相册首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+</head>
+<body class="bg-grayf">
+<div class="container" style="margin-top: 2%;margin-bottom:2%;border: 1px dashed #ccc;">
+	<button class="btn btn-primary" id="imgUpLoadBtn" data-toggle="modal" data-target="#myImgLoadModal"><span class="glyphicon glyphicon-picture"></span>上传照片</button>
+	<div class="row">
+		<div class="col-md-12" id="albumList">
+            <!--<div class="panel panel-default panel-album col-md-3 album-list">
+                <div class="panel-heading">相册1</div>
+                <div class="panel-body">
+                    <a href="javascript:;" class="thumbnail">
+                        <div class="album"><img src="../../images/banner1.png" alt="..."></div>
+                        <div class="caption">
+                            <h5>Thumbnail label</h5>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+
+	</div>
+</div>
+
+<!-- 图片上传Modal -->
+<div class="modal fade" id="myImgLoadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">图片上传</h4>
+      </div>
+      <div class="modal-body">
+      	<div id="imgSelect" style="margin-left:1em;">
+      		<label>上传到：</label>
+      		<select class="form-control" id="selectAlbum"></select>
+			<button class="btn btn-default" id="lastOption" data-toggle="modal" data-target="#myNewCreateImgModal"><span class="glyphicon glyphicon-plus"></span>新建相册</button>
+      	</div>
+        <div id="wrapper" >
+	        <div id="container">
+	            <!--头部，相册选择和格式选择-->
+	            <div id="selectInput">
+	            	<input type="file" id="fileInput" multiple="multiple"/>
+	            	<button type="button" class="btn btn-primary">选择图片</button>
+	            	<div id="imgPanel"></div>
+	            	<button id="imgUpload" class="btn btn-default">上传照片</button>
+	            </div>
+	        </div>
+	    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myNewCreateImgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">新建相册</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="creatImg">
+		  <div class="form-group">
+		    <label for="albumName" class="col-sm-3 control-label text-right">相册名称：</label>
+		    <div class="col-sm-9">
+		      <input type="text" class="form-control" id="albumName" placeholder="请输入名字">
+		    </div>
+		  </div>
+		</div>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary" onclick="creatAlbum();">确认</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="result"></div>
+</body>
+<script src="js/jquery.1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/indexDB.js"></script>
+</html>
+
+
+

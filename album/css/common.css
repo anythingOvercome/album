@@ -1,0 +1,120 @@
+/* ȥ�����߿� */
+a,a:focus{outline:none;}
+
+#imgUpLoadBtn{
+	margin-top:20px;
+	margin-bottom:20px;
+	/*display:none;*/
+}
+#selectAlbum{
+	display:inline-block;
+	width:30%;
+}
+#lastOption{
+	margin-top: -2px;
+}
+#imgUpLoadBtn>span,#lastOption>span{
+	top:2px;
+	margin-right:5px;
+}
+.creatImg{
+	min-height:200px;
+}
+.creatImg label{
+	line-height:34px;
+}
+.creatImg input{
+	width:80%;
+}
+.album-list{
+	/* position:relative; */
+	padding:0px;
+	width:24%;
+	margin-right:1%;;
+}
+.album-list .album img{
+	width:100%;
+	height:100%;
+}
+.deleteAlbum{
+	display:none;
+	float:right;
+	color:#555;
+	cursor:pointer;
+	font-size: 16px;
+}
+.album{
+	/* position:relative; */
+	height:150px;
+}
+.albumNumber{
+	/* position:absolute;
+	bottom:15px;
+	right:15px;
+	color:#000;
+    font-size: 26px; */
+    margin-left: 15px;
+}
+.albumName{
+	color:#00a2d4;
+	font-weight:bold;
+	margin:5px;
+}
+.deleteSiglePicture{
+	/*display:none;*/
+	cursor:pointer;
+}
+.deleteSiglePicture:hover{
+	color:#555;
+}
+#smallPictureList>li{
+	list-style:none;
+}
+#albumList .panel-album .thumbnail .album{
+	display:block;
+	height:190px;
+}
+#albumList .panel-album .thumbnail .album img{
+	max-width:100%;
+	max-height:100%;
+}
+/* #inputFile{
+	display:none;
+} */
+#albumList .album-list .panel-heading span{
+	float: right;
+	cursor: pointer;
+}
+#selectInput {
+	position: relative;
+    direction: ltr;
+    min-height: 200px;
+    overflow: hidden;
+    line-height: 18px;
+    margin-right: 10px;
+    /* padding: 3px; */
+    /*text-align: center;*/
+    width: 100%;
+    background: url(../img/image.png) no-repeat center center;
+}
+
+#fileInput {
+	cursor: pointer;
+    text-align: right;
+    z-index: 10;
+    /* font-size: 118px; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*margin-right: -41px;*/
+    opacity: 0;
+    height: 34px;
+    width: 82px;
+    filter: Alpha(opacity: 0);
+}
+#imgUpload{
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+}

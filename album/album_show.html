@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>相册详情页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/default.css" />
+<link rel="stylesheet" href="css/nick.css" />
+<link href="css/common.css" rel="stylesheet">
+</head>
+<body class="bg-grayf">
+<div class="container" id="albumDetail">
+        <article class="article">
+            <div class="article-head">
+                <h3 class="article-title" id="albumName"></h3>
+            </div>
+            <div class="article-info clearfix">
+                <!-- <div class="detail pull-left">
+                    <span class="author-name">企业级</span>
+                    <span class="article-date">7月10日</span>
+                </div> -->
+                <div class="pic-link pull-right hide" data-toggle="image">
+                    <span><a href="javascript:;" data-index="image"><i class="fa fa-image"></i> 高清查看</a></span>
+                </div>
+                <div class="pic-link pull-right" data-toggle="list">
+                    <span>支持<i class="fa fa-long-arrow-left"></i> <i class="fa fa-long-arrow-right"></i> 键翻阅图片</span>
+                    <span class="deleteSiglePicture">删除<i class="fa fa-trash"></i></span>
+                    <!-- <span><a href="#comment" data-index="comment"><i class="fa fa-comment"></i> 我有话说</a></span> -->
+                    <span><a href="javascript:;" data-index="list"><i class="fa fa-th-large"></i> 列表查看</a></span>
+                </div>
+            </div>
+
+            <div class="article-content">
+
+                    <!--图片特效内容开始-->
+                    <div class="pic-group">
+                        <!--大图展示-->
+                        <div class="pic-show">
+                            <div class="pic-show-top">
+                                <a href="#"><img src="" alt="" class="pic-big-show" id="pic1" curindex="0" /></a>
+                                <a id="preArrow" href="javascript:void(0)" class="control left" title="上一张"><span  id="preArrow_A"><i class="fa fa-chevron-left"></i></span></a>
+                                <a id="nextArrow" href="javascript:void(0)" class="control right" title="下一张"><span  id="nextArrow_A"><i class="fa fa-chevron-right"></i></span></a>
+                            </div>
+                            <div class="pic-show-text">
+                                <div class="pic-number"><span id="singlePictureIndex"></span>/<i id="totalNumber"></i></div>
+                                <div class="pic-text" id="albumNameText"></div>
+                            </div>
+                            <div class="picshowlist">
+                                <!--上一条图库-->
+                                <div class="pic-show-bottom">
+                                    <a class="control left" href="javascript:void(0)" id="preArrow_B"><i class="fa fa-chevron-left"></i></a>
+                                    <div class="pic-list-small">
+                                        <ul id="smallPictureList"></ul>
+                                    </div>
+                                    <a class="control right" href="javascript:void(0)" id="nextArrow_B"><i class="fa fa-chevron-right"></i></a>
+                                </div>
+                                <!--下一张图库新闻-->
+                            </div>
+                        </div>
+
+                        <!--列表展示-->
+                        <div class="pic-list-show">
+                            <ul id="bigPictureList"></ul>
+                        </div>
+                    </div>
+            </div>
+            <div class="article-foot">
+            </div>
+        </article>
+   </div>
+</body>
+<script src="js/jquery.1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layer/layer.js"></script>
+<script type="text/javascript" src="js/albumshow.js"></script>
+<script src="js/piccontent.js"></script>
+</html>
+
+
+
